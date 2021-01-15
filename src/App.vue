@@ -1,20 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <TheHeader v-if="!noHeader" />
+    <router-view :key="$route.fullPath" class="router" />
+    <TheFooter v-if="!noFooter" />
+    <TheLoading :show="loading" />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<script>
+import { mapState } from 'vuex'
+import { TheHeader, TheFooter, TheLoading } from '@/components/organisms'
+
+export default {
+  name: 'App',
+  components: {
+    TheHeader,
+    TheFooter,
+    TheLoading
+  },
+
+  computed: {
+
+    ...mapState({
+      loading: state => state.loading.loading,
+    }),
+
+    noHeader() {
+      return this.$route.meta.noHeader
+    },
+
+    noFooter() {
+      return this.$route.meta.noFooter
+    },
+  }
 }
+</script>
+
+<style lang="scss">
+  @import "@/assets/styles/main.scss";
 </style>
