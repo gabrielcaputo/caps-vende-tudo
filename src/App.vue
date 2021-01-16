@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <TheHeader v-if="!noHeader" />
-    <router-view :key="$route.fullPath" class="router" />
+    <vue-page-transition name="fade">
+      <router-view :key="$route.fullPath" class="router" />
+    </vue-page-transition>
     <TheFooter v-if="!noFooter" />
     <TheLoading :show="loading" />
   </div>
@@ -38,4 +40,17 @@ export default {
 
 <style lang="scss">
   @import "@/assets/styles/main.scss";
+</style>
+
+<style lang="scss" scoped>
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  // background: #ccc;
+
+  .router {
+    flex-grow: 1;
+  }
+}
 </style>

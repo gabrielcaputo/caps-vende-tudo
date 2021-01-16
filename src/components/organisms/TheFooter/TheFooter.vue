@@ -1,11 +1,56 @@
 <template>
     <footer class="TheFooter">
-        Footer
+        <div class="TheFooter__Container">
+            <SocialMarketplaces class="socialMarketplaces" />
+            <div class="info">
+                <span>Gabriel Caputo</span>
+                <a href="mailto:caputomateus@gmail.com" target="_blank">caputomateus@gmail.com</a>
+                <a href="https://api.whatsapp.com/send?phone=5511960667581&text=teste" target="_blank">+55 (11) 960 667 581</a>
+                <span>@ São Paulo/SP</span>
+            </div>
+        </div>
     </footer>
 </template>
 
 <script>
+import { SocialMarketplaces } from '@/components/molecules'
 export default {
-    name: 'TheFooter'
+    name: 'TheFooter',
+    components: {
+        SocialMarketplaces
+    },
 }
 </script>
+
+<style lang="scss" scoped>
+.TheFooter {
+    padding: 32px 0;
+    &__Container {
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+
+</style>

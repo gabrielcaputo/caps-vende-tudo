@@ -5,6 +5,7 @@ const routes = [
   {
     name: 'notFound',
     path: '*',
+    // meta: { noHeader: true },
     component: NotFound
   },
 ]
