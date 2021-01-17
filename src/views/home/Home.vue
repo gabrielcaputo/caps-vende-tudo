@@ -4,6 +4,7 @@
       <div class="Home__Product" v-for="(product, id) in products" :key="id" @click="goToProduct(id)">
         <div class="featuredPhoto" :style="productFeaturedPhoto(id)"></div>
         <div class="name">{{ product.name }}</div>
+        <div class="price">{{ product.price }}</div>
       </div>
     </div>
   </div>
@@ -26,7 +27,11 @@ export default {
 
     productFeaturedPhoto(id) {
       return {
-        backgroundImage: `url(/products/${id}/${this.products[id].featuredPhoto})`,
+        backgroundImage: `url(${
+          this.products[id].photos[0].thumb ?
+          this.products[id].photos[0].thumb :
+          this.products[id].photos[0].src
+        })`,
       }
     }
   }
@@ -44,7 +49,7 @@ export default {
   &__Product {
     display: flex;
     width: calc(50% - (#{$unit} / 2));
-    background: blue;
+    background: #ccc;
     padding-top: calc((50% - (#{$unit} / 2)) * 0.66666);
     position: relative;    
     overflow: hidden;
@@ -57,10 +62,10 @@ export default {
 
     &:hover {
       .featuredPhoto {
-        transform: scale(1.2);
+        transform: scale(1.05);
       }
       .name {
-        bottom: 8px;
+        top: 8px;
         opacity: 1;
       }
     }
@@ -73,25 +78,35 @@ export default {
       height: 100%;
       background-size: cover;
       background-position: center center;
+      transform: scale(1.01);
       transition: all 0.3s ease;
-      &:hover {
-        transform: scale(1.1);
-      }
     }
 
     .name {
       position: absolute;
-      bottom: 8px;
-      right: 8px;
+      top: 8px;
+      left: 8px;
       color: #fff;
-      background: #333;
+      background: rgba(#333, 0.8);
       padding: 8px;
       opacity: 1;
       transition: all 0.3s ease;
       @media screen and (min-width: 768px) {
-        bottom: 0;
+        top: 0;
         opacity: 0;
       }
+    }
+
+    .price {
+      font-size: 24px;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      color: #fff;
+      background: rgba($green, 0.8);
+      padding: 8px;
+      opacity: 1;
+      transition: all 0.3s ease;
     }
   }
 }

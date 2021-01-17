@@ -1,43 +1,53 @@
 <template>
-    <footer class="SocialMarketplaces" :class="`SocialMarketplaces--${theme}`">
+    <div class="SocialMarketplaces" :class="`SocialMarketplaces--${theme}`">
         <ul>
             <li>
-                <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="mercadolivre" />
+                <a href="https://www.mercadolivre.com.br/caputomateus" target="_blank">
+                    <Icon class="icon" :color="theme" name="mercadolivre" v-tooltip="'Abrir anúncios no Mercado Livre'"/>
                 </a>
             </li>
             <li>
                 <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="olx" />
+                    <Icon class="icon" :color="theme" name="olx" v-tooltip="'Abrir anúncios no OLX'"/>
                 </a>
             </li>
             <li>
                 <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="semexe" />
+                    <Icon class="icon" :color="theme" name="semexe" v-tooltip="'Abrir anúncios no semexe'"/>
                 </a>
             </li>
             <li>
                 <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="instagram" />
+                    <Icon class="icon" :color="theme" name="facebook" v-tooltip="'Abrir anúncios no Facebook Marketplace'"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/caputomateus" target="_blank">
+                    <Icon class="icon" :color="theme" name="instagram" v-tooltip="'Abrir perfil no Instagram'"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://m.me/caputomateus" target="_blank">
+                    <Icon class="icon" :color="theme" name="messenger" v-tooltip="'Enviar Messenger'"/>
                 </a>
             </li>
             <li>
                 <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="facebook" />
+                    <Icon class="icon" :color="theme" name="whatsapp" v-tooltip="'Enviar WhatsApp'"/>
                 </a>
             </li>
             <li>
                 <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="messenger" />
+                    <Icon class="icon" :color="theme" name="phone" v-tooltip="'Ligar (+55 11 960 667 581)'"/>
                 </a>
             </li>
             <li>
                 <a href="" target="_blank">
-                    <Icon class="icon" :color="theme" name="whatsapp" />
+                    <Icon class="icon" :color="theme" name="email" v-tooltip="'Enviar email (caputomateus@gmail.com)'"/>
                 </a>
             </li>
         </ul>
-    </footer>
+    </div>
 </template>
 
 <script>

@@ -3,10 +3,7 @@
         <div class="TheFooter__Container">
             <SocialMarketplaces class="socialMarketplaces" />
             <div class="info">
-                <span>Gabriel Caputo</span>
-                <a href="mailto:caputomateus@gmail.com" target="_blank">caputomateus@gmail.com</a>
-                <a href="https://api.whatsapp.com/send?phone=5511960667581&text=teste" target="_blank">+55 (11) 960 667 581</a>
-                <span>@ São Paulo/SP</span>
+                <span>Gabriel Caputo</span> | <span>São Paulo/SP</span>
             </div>
         </div>
     </footer>
@@ -42,7 +39,6 @@ export default {
             align-items: center;
             gap: 12px;
             @media screen and (max-width: 767px) {
-                flex-direction: column;
                 gap: 8px;
             }
 
@@ -50,7 +46,26 @@ export default {
                 color: #000;
             }
         }
+        
+
+        
     }
 }
 
+</style>
+<style lang="scss">
+.TheFooter {
+    &__Container {
+        .socialMarketplaces {
+            ul {
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                @media screen and (max-width: 374px) {
+                    width: 180px;            
+                }
+            }
+        }
+    }
+}
 </style>

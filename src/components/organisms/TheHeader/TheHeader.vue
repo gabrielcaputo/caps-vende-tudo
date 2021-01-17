@@ -1,9 +1,10 @@
 <template>
     <header class="TheHeader" :class="`TheHeader--${theme}`">
         <div class="TheHeader__Container">
+            <Icon class="goBack" :color="theme" name="chevron-left" @click="$router.push('/')"/>
             <strong @click="$router.push('/')">
-                <Icon class="goBack" :color="theme" name="chevron-left" />
-                <span>Caps Vende Tudo!</span>
+                <img :src="caps" alt="">
+                Caps Vende Tudo!
             </strong>
             <SocialMarketplaces :theme="theme" class="socialMarketplaces" />
         </div>
@@ -21,6 +22,9 @@ export default {
         SocialMarketplaces
     },
     computed: {
+        caps() {
+            return require(`@/assets/images/caps.jpg`)
+        },
         theme() {
             return this.$route.meta.headerTheme ? this.$route.meta.headerTheme : 'dark'
         }
@@ -32,10 +36,11 @@ export default {
 .TheHeader {
     position: relative;
     padding: 48px 0;
-    z-index: $z-nav;
+    z-index: 1;
     transition: all 0.3s ease;
 
     @media screen and (max-width: 767px) {
+        padding: 24px 0;
         .socialMarketplaces {
             display: none;
         }
@@ -48,19 +53,29 @@ export default {
     &--light {
         color: #fff;
         @include gradient(180deg, rgba(#000, 0.8), transparent);
-        padding: 16px 0;
+        @media screen and (min-width: 767px) {
+            padding: 16px 0;
+        }
 
+        .TheHeader__Container .goBack {
+            @media screen and (max-width: 767px) {
+                height: 24px;
+                display: inline-block;
+            }
+        }
         .TheHeader__Container strong {
             font-size: 24px;
+            img {
+                height: 48px;
+            }
             @media screen and (max-width: 767px) {
-                .goBack {
-                    height: 24px;
-                    display: inline-block;
+                transition: none;
+                text-align: left;
+                font-size: 0;
+                img {
+                    transition: none;
+                    height: 0;
                 }
-                span {
-                    font-size: 0;
-                }
-                font-size: 24px;
             }
         }
         
@@ -71,6 +86,9 @@ export default {
         justify-content: space-between;
         align-items: center;
 
+        .goBack {
+            height: 0;
+        }
 
         strong {
             font-size: 10px;
@@ -81,17 +99,23 @@ export default {
             padding: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 16px;
 
-            .goBack {
-                height: 0;
-            }
-
-            span {
+            img {
+                display: block;
+                height: 64px;
+                border-radius: 50%;
                 transition: all 0.3s ease;
-                @media screen and (max-width: 767px) {
-                    transition: none;
-                }
             }
+            @media screen and (max-width: 767px) {
+                text-align: center;
+                flex-direction: column;
+            }
+
+            
         }
 
         

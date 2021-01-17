@@ -9,22 +9,34 @@
     "dev": "vue-cli-service serve --port $PORT"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "babel-runtime": "^6.26.0",
     "core-js": "^2.6.5",
-    "node-sass": "^5.0.0",
+    "v-tooltip": "^2.1.2",
     "vue": "^2.6.10",
+    "vue-cool-lightbox": "^2.7.0",
+    "vue-markdown": "^2.2.4",
     "vue-page-transition": "^0.2.2",
     "vue-router": "^3.0.3",
     "vuex": "^3.6.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.12.5",
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "^3.9.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1",
+    "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

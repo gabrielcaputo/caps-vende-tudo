@@ -6,25 +6,33 @@
     </vue-page-transition>
     <TheFooter v-if="!noFooter" />
     <TheLoading :show="loading" />
+    <CoolLightBox 
+      :items="lightbox.items" 
+      :index="lightbox.index"
+      @close="closeLightbox">
+    </CoolLightBox>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import { TheHeader, TheFooter, TheLoading } from '@/components/organisms'
+import CoolLightBox from 'vue-cool-lightbox'
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 
 export default {
   name: 'App',
   components: {
+    CoolLightBox,
     TheHeader,
     TheFooter,
     TheLoading
   },
 
   computed: {
-
     ...mapState({
       loading: state => state.loading.loading,
+      lightbox: state => state.lightbox.lightbox,
     }),
 
     noHeader() {
@@ -34,6 +42,12 @@ export default {
     noFooter() {
       return this.$route.meta.noFooter
     },
+  },
+
+  methods: {
+    ...mapActions({
+      closeLightbox: 'lightbox/closeLightbox'
+    }),
   }
 }
 </script>
