@@ -219,3 +219,21 @@ export default {
   }
 }
 </style>
+
+<style lang="scss">
+.Product {
+  &__Container {
+    table {
+      margin-bottom: 32px;
+    }
+    table thead th {
+      // padding: 16px 0;
+      background: #666;
+      color: #fff;
+    }
+    table tbody td:first-of-type {
+      font-weight: bold;
+    }
+  }
+}
+</style>
