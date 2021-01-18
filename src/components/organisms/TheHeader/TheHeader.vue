@@ -23,7 +23,7 @@ export default {
     },
     computed: {
         caps() {
-            return require(`@/assets/images/caps.jpg`)
+            return require(`@/assets/images/caps.png`)
         },
         theme() {
             return this.$route.meta.headerTheme ? this.$route.meta.headerTheme : 'dark'
