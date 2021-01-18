@@ -2,9 +2,7 @@
     <footer class="TheFooter">
         <div class="TheFooter__Container">
             <SocialMarketplaces class="socialMarketplaces" />
-            <div class="info">
-                <span>Gabriel Caputo</span> | <span>São Paulo/SP</span>
-            </div>
+            <div class="info">Gabriel Caputo | São Paulo/SP</div>
         </div>
     </footer>
 </template>
@@ -31,24 +29,7 @@ export default {
         @media screen and (max-width: 767px) {
             flex-direction: column;
             gap: 8px;
-        }
-        
-        .info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            @media screen and (max-width: 767px) {
-                gap: 8px;
-            }
-
-            a {
-                color: #000;
-            }
-        }
-        
-
-        
+        }     
     }
 }
 
@@ -61,7 +42,7 @@ export default {
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                @media screen and (max-width: 374px) {
+                @media screen and (max-width: 390px) {
                     width: 180px;            
                 }
             }

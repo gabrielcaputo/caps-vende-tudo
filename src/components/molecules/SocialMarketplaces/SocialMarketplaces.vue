@@ -70,11 +70,11 @@ export default {
 .SocialMarketplaces {
     ul {
         display: flex;
-        gap: 12px;
         margin: 0;
         padding: 0;
         transition: all 0.3s ease;
         li {
+            margin: 6px;
             display: block;
             height: 24px;
             position: relative;
@@ -83,9 +83,8 @@ export default {
     }
     &--light {
         ul {
-            gap: 8px;
-
             li {
+                margin: 4px;
                 height: 16px;
             }
         }

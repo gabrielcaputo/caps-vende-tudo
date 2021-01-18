@@ -102,13 +102,16 @@ export default {
             width: 100%;
             display: flex;
             align-items: center;
-            gap: 16px;
 
             img {
                 display: block;
                 height: 64px;
                 border-radius: 50%;
                 transition: all 0.3s ease;
+                margin: 0 16px 0 0;
+                @media screen and (max-width: 767px) {
+                    margin: 0 0 16px 0;
+                }
             }
             @media screen and (max-width: 767px) {
                 text-align: center;

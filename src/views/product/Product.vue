@@ -7,12 +7,15 @@
       </div>
     </div>
     <div class="Product__Container">
-      <div class="Product__Photos" :style="productPhotosColumns">
-        <div class="Product__Photo" v-for="(photo, i) in product.photos" :key="i" @click="openLightbox(i)">
+      <masonry
+        :cols="productPhotosColumns"
+        :gutter="16"
+      >
+        <div class="Product__Photo" v-for="(photo, i) in product.photos.slice(1)" :key="i+1" @click="openLightbox(i+1)">
           <img class="photo" :src="`${photo.thumb ? photo.thumb : photo.src}`" :alt="photo.title">
           <div v-if="photo.title" class="title">{{ photo.title }}</div>
         </div>
-      </div>
+      </masonry>
       <Markdown :src="`/products/${this.$route.params.id}/description.md`" />
     </div>
   </div>
@@ -58,9 +61,7 @@ export default {
     },
 
     productPhotosColumns() {
-      return {
-        columnCount: this.window.width < 768 ? this.product.columnsMobile : this.product.columns
-      }
+      return this.window.width < 768 ? this.product.columnsMobile : this.product.columns
     }
   },
   mounted() {
@@ -166,22 +167,14 @@ export default {
     position: relative;
   }
 
-  &__Photos {
-    column-gap: 16px;
-    margin: 16px 0 0 0;  
-  }
-
   &__Photo {
     background-color: #eee;
-    display: inline-flex;
+    display: block;
     margin: 0 0 16px;
     width: 100%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    &:first-of-type {
-      display: none;
-    }
 
     &:hover {
       .photo {

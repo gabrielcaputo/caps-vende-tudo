@@ -44,15 +44,19 @@ export default {
   &__Container {
     display: flex;
     flex-wrap: wrap;
-    gap: $unit;
+    padding: 0 calc(48px - (#{$unit} / 4));
+    @media screen and (max-width: 767px) {
+      padding: 0 calc(16px - (#{$unit} / 4));
+    }
   }
   &__Product {
     display: flex;
-    width: calc(50% - (#{$unit} / 2));
+    width: calc(50% - #{$unit});
     background: #ccc;
     padding-top: calc((50% - (#{$unit} / 2)) * 0.66666);
     position: relative;    
     overflow: hidden;
+    margin: calc(#{$unit} / 2);
     cursor: pointer;
 
     @media screen and (max-width: 767px) {

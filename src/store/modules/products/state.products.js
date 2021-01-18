@@ -12,12 +12,12 @@ export default {
           description: null,
           price: null
         },
-        // {
-        //   src: "/products/trek-x-caliber-8/2.jpg",
-        //   title: "Trek X-Caliber 8",
-        //   description: null,
-        //   price: null
-        // },
+        {
+          src: "/products/trek-x-caliber-8/2.jpg",
+          title: null,
+          description: null,
+          price: null
+        },
         {
           src: "/products/trek-x-caliber-8/3.jpg",
           title: null,
@@ -85,18 +85,6 @@ export default {
           price: null
         },
         {
-          src: "/products/trek-x-caliber-8/18.jpg",
-          title: "2x Suportes para garrafas de água",
-          description: null,
-          price: null
-        },
-        {
-          src: "/products/trek-x-caliber-8/19.jpg",
-          title: "2x Suportes para garrafas de água",
-          description: null,
-          price: null
-        },
-        {
           src: "/products/trek-x-caliber-8/14.jpg",
           title: "RockShox 30 Silver, mola pneumática, pré-carga, contragolpe, bloqueio TurnKey, tubo de direção cônico E2, Geometria G2 c/deslocamento de 51 mm, curso de 100 mm.",
           description: null,
@@ -117,6 +105,18 @@ export default {
         {
           src: "/products/trek-x-caliber-8/17.jpg",
           title: "Pneu traseiro Bontrager XR2, 29x2,20 pol. em bom estado para uso.",
+          description: null,
+          price: null
+        },
+        {
+          src: "/products/trek-x-caliber-8/18.jpg",
+          title: "2x Suportes para garrafas de água",
+          description: null,
+          price: null
+        },
+        {
+          src: "/products/trek-x-caliber-8/19.jpg",
+          title: "2x Suportes para garrafas de água",
           description: null,
           price: null
         },
@@ -156,18 +156,18 @@ export default {
           description: null,
           price: null
         },
+        // {
+        //   src: "/products/trek-x-caliber-8/28.jpg",
+        //   title: null,
+        //   description: null,
+        //   price: null
+        // },
         {
-          src: "/products/trek-x-caliber-8/28.jpg",
+          src: "/products/trek-x-caliber-8/29.jpg",
           title: null,
           description: null,
           price: null
         },
-        // {
-        //   src: "/products/trek-x-caliber-8/29.jpg",
-        //   title: "Trek X-Caliber 8",
-        //   description: null,
-        //   price: null
-        // },
         {
           src: "/products/trek-x-caliber-8/30.jpg",
           title: "Manopla direita Bontrager Race Lite, c/ trava. Alavanca de câmbio Shimano Deore M6000. Alavanca de freio Shimano M315.",
@@ -418,12 +418,6 @@ export default {
           price: null
         },
         {
-          src: "/products/vandy-vape-pulse-x-kit/6.jpg",
-          title: "Deck do Atomizador Pulse X RDA 24mm",
-          description: null,
-          price: null
-        },
-        {
           src: "/products/vandy-vape-pulse-x-kit/7.jpg",
           title: "Mod Pulse X com a tampa frontal aberta mostrando o compartimento com a garrafa Squonk e o compartimento para 1x bateria 21700, 20700 ou 18650 (com adaptador incluso).",
           description: null,
@@ -434,7 +428,13 @@ export default {
           title: "Mod Pulse X com a garrafa squonk desconectada e a bateria 18650 conectada com o adaptador. Bateria não inclusa.",
           description: null,
           price: null
-        }
+        },
+        {
+          src: "/products/vandy-vape-pulse-x-kit/6.jpg",
+          title: "Deck do Atomizador Pulse X RDA 24mm",
+          description: null,
+          price: null
+        },
       ]
     },
     'vandy-vape-pulse-2': {
