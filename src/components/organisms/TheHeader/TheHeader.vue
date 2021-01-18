@@ -102,6 +102,7 @@ export default {
             width: 100%;
             display: flex;
             align-items: center;
+            font-family: 'Sedgwick Ave', cursive;
 
             img {
                 display: block;
