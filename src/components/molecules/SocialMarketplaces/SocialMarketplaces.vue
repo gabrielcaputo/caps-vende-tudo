@@ -2,27 +2,27 @@
     <div class="SocialMarketplaces" :class="`SocialMarketplaces--${theme}`">
         <ul>
             <li>
-                <a href="https://www.mercadolivre.com.br/caputomateus" target="_blank">
+                <a href="https://www.mercadolivre.com.br/" target="_blank">
                     <Icon class="icon" :color="theme" name="mercadolivre" v-tooltip="'Abrir anúncios no Mercado Livre'"/>
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="https://www.olx.com.br/" target="_blank">
                     <Icon class="icon" :color="theme" name="olx" v-tooltip="'Abrir anúncios no OLX'"/>
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="https://www.semexe.com/" target="_blank">
                     <Icon class="icon" :color="theme" name="semexe" v-tooltip="'Abrir anúncios no semexe'"/>
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="https://www.facebook.com/caputomateus/" target="_blank">
                     <Icon class="icon" :color="theme" name="facebook" v-tooltip="'Abrir anúncios no Facebook Marketplace'"/>
                 </a>
             </li>
             <li>
-                <a href="https://instagram.com/caputomateus" target="_blank">
+                <a href="https://instagram.com/gabrielcaputo" target="_blank">
                     <Icon class="icon" :color="theme" name="instagram" v-tooltip="'Abrir perfil no Instagram'"/>
                 </a>
             </li>
@@ -32,17 +32,17 @@
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=5511960667581" target="_blank">
                     <Icon class="icon" :color="theme" name="whatsapp" v-tooltip="'Enviar WhatsApp'"/>
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="tel:+5511960667581" target="_blank">
                     <Icon class="icon" :color="theme" name="phone" v-tooltip="'Ligar (+55 11 960 667 581)'"/>
                 </a>
             </li>
             <li>
-                <a href="" target="_blank">
+                <a href="mailto:caputomateus@gmail.com" target="_blank">
                     <Icon class="icon" :color="theme" name="email" v-tooltip="'Enviar email (caputomateus@gmail.com)'"/>
                 </a>
             </li>

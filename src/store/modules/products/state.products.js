@@ -216,7 +216,7 @@ export default {
         {
           src: "https://youtu.be/Ojd-VOy3Jjs",
           thumb: "/products/lenovo-ideapad-c340/15.jpg",
-          title: "Demonstração da tela de toque e Caneta Active Pen",
+          title: "Demonstração da tela de toque e Caneta Digital Pen",
           description: null,
           price: null
         },
@@ -246,7 +246,7 @@ export default {
         },
         {
           src: "/products/lenovo-ideapad-c340/6.jpg",
-          title: "Caneta Active Pen presa ao suporte na porta USB",
+          title: "Caneta Digital Pen presa ao suporte na porta USB",
           description: null,
           price: null
         },
@@ -528,6 +528,44 @@ export default {
           title: "Cotn Threads (Embalagem só tem 2 unidades)",
           description: null,
           price: 4.00
+        },
+      ]
+    },
+    'aquario-32l': {
+      name: "Aquário 32L",
+      price: "R$ 50,00",
+      columns: 2,
+      columnsMobile: 2,
+      photos: [
+        {
+          src: "/products/aquario-32l/1.jpg",
+          title: null,
+          description: null,
+          price: null
+        },
+        {
+          src: "/products/aquario-32l/2.jpg",
+          title: null,
+          description: null,
+          price: null
+        },
+        {
+          src: "/products/aquario-32l/3.jpg",
+          title: null,
+          description: null,
+          price: null
+        },
+        {
+          src: "/products/aquario-32l/4.jpg",
+          title: null,
+          description: null,
+          price: null
+        },
+        {
+          src: "/products/aquario-32l/5.jpg",
+          title: null,
+          description: null,
+          price: null
         },
       ]
     },

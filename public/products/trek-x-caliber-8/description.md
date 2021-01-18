@@ -1,6 +1,6 @@
 # Trek X-Caliber 8 (2018)
 
-Bicicleta comprada no dia 07/05/2018 na loja Tutto Bike em São Paulo/SP e em bom estado de conservação.Comprei pra fazer passeios e viagens em estradas de terra e não cheguei a rodar 1000km.
+Bicicleta comprada no dia 07/05/2018 na loja Tutto Bike em São Paulo/SP e em bom estado de conservação. Comprei pra fazer passeios e viagens em estradas de terra e não cheguei a rodar 1000km.
 Contém alguns detalhes e marcas de uso na pintura conforme mostram as fotos acima.
 
 O quadro da bicicleta é da X-Caliber 7, que é o mesmo quadro da X-Caliber 8, porém na cor vermelha. Todos os componentes são da X-Caliber 8 e na nota fiscal a venda foi feita constando como uma X-Caliber 8 Cinza. Nota fiscal em meu nome conténdo o número do quadro nas informações complementares.
@@ -136,7 +136,7 @@ Ultima revisão feita em Dezembro de 2020 onde a mesma foi desmontada e foram lu
 </table>
 
 ## Condições de compra:
-- Vendas somente para quem vier buscar na cidade de São Paulo/SP.
-- Visitas e agendamento para conhecer a bicicleta no Parque Ibirapuera em São Paulo/SP. 
-- Aceito propostas para pagamento a vista com depósito em conta.
+- Não envio a bicicleta, a venda é somente para quem vier buscar na cidade de São Paulo/SP.
+- Aceito visitas para conhecer a bicicleta no Parque Ibirapuera em São Paulo/SP de acordo com agendamento. 
+- Aceito propostas para pagamento a vista com transferência bancária.
 - Parcelamento somente via MercadoLivre e SeMexe.
