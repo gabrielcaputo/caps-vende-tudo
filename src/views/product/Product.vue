@@ -189,6 +189,10 @@ export default {
     width: 100%;
     position: relative;
     overflow: hidden;
+    background-image: url('~@/assets/images/loading.svg');
+    background-size: 64px;
+    background-position: center center;
+    background-repeat: no-repeat;
     cursor: pointer;
 
     &:hover {
@@ -211,6 +215,7 @@ export default {
 
       &[lazy=loading] {
         background-color: #eee;
+        transform: scale(0);
         padding: calc(50% - 24px);
       }
     }
