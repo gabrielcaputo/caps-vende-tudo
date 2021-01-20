@@ -3,7 +3,7 @@
     <div class="Home__Container">
       <div class="Home__Product" v-for="(product, id) in products" :key="id" @click="goToProduct(id)">
         <div class="featuredPhoto" v-lazy:background-image="products[id].photos[0].src"></div>
-        <div class="name">{{ product.name }}</div>
+        <div class="title">{{ product.title }}</div>
         <div class="price">{{ product.price }}</div>
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
       .featuredPhoto {
         transform: scale(1.05);
       }
-      .name {
+      .title {
         top: 8px;
         opacity: 1;
       }
@@ -99,7 +99,7 @@ export default {
       }
     }
 
-    .name {
+    .title {
       position: absolute;
       top: 8px;
       left: 8px;

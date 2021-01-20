@@ -2,7 +2,7 @@
   <div class="Product">
     <div class="Product__Featured" v-lazy:background-image="product.photos[0].src">
       <div class="Product__FeaturedWrap">
-        <div class="Product__Name">{{ product.name }}</div>
+        <div class="Product__Title">{{ product.title }}</div>
         <div class="Product__Price">
           {{ product.price }}
           <small v-if="product.priceDetail" v-html="product.priceDetail"></small>
@@ -32,11 +32,11 @@ export default {
   name: 'product',
   metaInfo() {
     return {
-      title: `${this.products[this.$route.params.id].name} - Caps Vende Tudo!`,
+      title: `${this.products[this.$route.params.id].title} - Caps Vende Tudo!`,
       meta: [
         { property: 'og:url', content: window.location.href },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: `${this.products[this.$route.params.id].name} - Caps Vende Tudo!` },
+        { property: 'og:title', content: `${this.products[this.$route.params.id].title} - Caps Vende Tudo!` },
         { property: 'og:description', content: `${this.products[this.$route.params.id].description}` },
         { property: 'og:image', content: `${window.location.origin}${this.products[this.$route.params.id].photos[0].thumb}` },
         { name: 'robots', content: 'index,follow' } 
@@ -140,7 +140,7 @@ export default {
     top: 0;
   }
 
-  &__Name, &__Price {
+  &__Title, &__Price {
     position: absolute;
     margin: 0;
     padding: 8px;
@@ -156,7 +156,7 @@ export default {
     }
   }
 
-  &__Name {
+  &__Title {
     bottom: -29px;
     left: 48px;
     max-width: 50%;

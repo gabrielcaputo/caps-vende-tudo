@@ -1,7 +1,8 @@
 export default {
   products: {
     'trek-x-caliber-8': {
-      name: "Trek X-Caliber 8",
+      title: "Trek X-Caliber 8",
+      description: "",
       price: "R$ 7.000,00",
       columns: 4,
       columnsMobile: 3,
@@ -226,7 +227,8 @@ export default {
       ]
     },
     'lenovo-ideapad-c340': {
-      name: "Lenovo Ideapad C340 (Core i7, 8GB RAM e 256GB SSD)",
+      title: "Lenovo Ideapad C340 (Core i7, 8GB RAM e 256GB SSD)",
+      description: "",
       price: "R$ 3.500,00",
       columns: 3,
       columnsMobile: 2,
@@ -339,7 +341,8 @@ export default {
       ]
     },
     'vaporesso-polar': {
-      name: "Vaporesso Polar",
+      title: "Vaporesso Polar",
+      description: "",
       price: "R$ 100,00",
       columns: 3,
       columnsMobile: 2,
@@ -439,7 +442,8 @@ export default {
       ]
     },
     'vandy-vape-pulse-x-kit': {
-      name: "Vandy Vape Pulse X (Kit)",
+      title: "Vandy Vape Pulse X (Kit)",
+      description: "",
       price: "R$ 200,00",
       columns: 3,
       columnsMobile: 2,
@@ -503,7 +507,8 @@ export default {
       ]
     },
     'vandy-vape-pulse-2': {
-      name: "Vandy Vape Pulse 2",
+      title: "Vandy Vape Pulse 2",
+      description: "",
       price: "R$ 100,00",
       columns: 2,
       columnsMobile: 2,
@@ -546,7 +551,8 @@ export default {
       ]
     },
     'itens-diversos-vape': {
-      name: "Itens Diversos p/ Vape",
+      title: "Itens Diversos p/ Vape",
+      description: "",
       price: "R$ 150,00",
       priceDetail: "(preço para compra de <br>todos itens, com desconto)",
       columns: 2,
@@ -618,7 +624,8 @@ export default {
       ]
     },
     'aquario-32l': {
-      name: "Aquário 32L",
+      title: "Aquário 32L",
+      description: "",
       price: "R$ 50,00",
       columns: 2,
       columnsMobile: 2,
