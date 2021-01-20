@@ -17,14 +17,6 @@ export default {
   metaInfo() {
     return {
       title: 'Caps Vende Tudo!',
-      meta: [
-        { property: 'og:url', content: window.location.origin },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Caps Vende Tudo!' },
-        { property: 'og:description', content: "Confira meus itens" },
-        { property: 'og:image', content: `${window.location.origin}/og.png` },
-        { name: 'robots', content: 'index,follow' } 
-      ]
     }
   },
   components: {},

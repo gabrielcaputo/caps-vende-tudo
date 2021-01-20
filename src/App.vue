@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheHeader v-if="!noHeader" />
-    <vue-page-transition name="fade">
+    <vue-page-transition name="fade-in-down">
       <router-view :key="$route.fullPath" class="router" />
     </vue-page-transition>
     <TheFooter v-if="!noFooter" />

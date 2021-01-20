@@ -33,14 +33,6 @@ export default {
   metaInfo() {
     return {
       title: `${this.products[this.$route.params.id].title} - Caps Vende Tudo!`,
-      meta: [
-        { property: 'og:url', content: window.location.href },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: `${this.products[this.$route.params.id].title} - Caps Vende Tudo!` },
-        { property: 'og:description', content: `${this.products[this.$route.params.id].description}` },
-        { property: 'og:image', content: `${window.location.origin}${this.products[this.$route.params.id].photos[0].thumb}` },
-        { name: 'robots', content: 'index,follow' } 
-      ]
     }
   },
   components: {
@@ -48,7 +40,6 @@ export default {
   },
   data() {
     return {
-      imagesLoaded: 0,
       window: {
         width: 0,
         height: 0
@@ -194,6 +185,7 @@ export default {
 
   &__Container {
     padding-top: 0;
+    padding-bottom: 96px;
     position: relative;
   }
 
