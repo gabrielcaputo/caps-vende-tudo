@@ -40,7 +40,7 @@ export default {
     transition: all 0.3s ease;
 
     @media screen and (max-width: 767px) {
-        padding: 24px 0;
+        padding: 12px 0;
         .socialMarketplaces {
             display: none;
         }
@@ -115,6 +115,7 @@ export default {
                         drop-shadow(2px -2px 0 #fff) 
                         drop-shadow(-2px -2px 0 #fff);
                 @media screen and (max-width: 767px) {
+                    height: 96px;
                     margin: 0 0 16px 0;
                 }
             }

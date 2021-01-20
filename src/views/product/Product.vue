@@ -20,7 +20,7 @@
           <div v-if="photo.price" class="price">{{ photo.price }}</div>
         </div>
       </masonry>
-      <Markdown :src="`/products/${this.$route.params.id}/description.md`" />
+      <Markdown :src="`/product/${this.$route.params.id}/description.md`" />
     </div>
   </div>
 </template>
@@ -30,6 +30,19 @@ import { mapState, mapActions } from 'vuex'
 import { Markdown } from '@/components/molecules'
 export default {
   name: 'product',
+  metaInfo() {
+    return {
+      title: `${this.products[this.$route.params.id].name} - Caps Vende Tudo!`,
+      meta: [
+        { property: 'og:url', content: window.location.href },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: `${this.products[this.$route.params.id].name} - Caps Vende Tudo!` },
+        { property: 'og:description', content: `${this.products[this.$route.params.id].description}` },
+        { property: 'og:image', content: `${window.location.origin}${this.products[this.$route.params.id].photos[0].thumb}` },
+        { name: 'robots', content: 'index,follow' } 
+      ]
+    }
+  },
   components: {
     Markdown
   },
@@ -111,7 +124,7 @@ export default {
       height: calc(100vw * 0.66666);
     }
     @media screen and (max-width: 767px) {
-      margin-top: -80px;
+      margin-top: -56px;
       margin-bottom: 32px;
     }
   }
@@ -137,6 +150,7 @@ export default {
     width: auto;
     font-size: 24px;
     z-index: 2;
+    border-radius: 4px;
     @media screen and (min-width: 768px) {
       font-size: 36px;
     }
@@ -145,6 +159,7 @@ export default {
   &__Name {
     bottom: -29px;
     left: 48px;
+    max-width: 50%;
 
     @media screen and (max-width: 767px) {
       bottom: -18px;
@@ -193,7 +208,17 @@ export default {
     background-size: 64px;
     background-position: center center;
     background-repeat: no-repeat;
+    border-radius: 4px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
+                0 2px 2px 0 rgba(0,0,0,.14),
+                0 1px 5px 0 rgba(0,0,0,.12);
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      border-radius: 2px;
+      box-shadow: 0 3px 1px -2px rgba(0,0,0,.1),
+                0 2px 2px 0 rgba(0,0,0,.07),
+                0 1px 5px 0 rgba(0,0,0,.06);
+    }
 
     &:hover {
       .photo {
@@ -230,6 +255,8 @@ export default {
       opacity: 0;
       transition: all 0.3s ease;
       font-size: 14px;
+      border-radius: 4px;
+      
       @media screen and (max-width: 768px) {
         opacity: 0 !important;
       }
@@ -244,6 +271,7 @@ export default {
       background: rgba($green, 0.8);
       padding: 8px;
       opacity: 1;
+      border-radius: 4px;
       transition: all 0.3s ease;
       @media screen and (max-width: 768px) {
         font-size: 12px;
@@ -258,14 +286,36 @@ export default {
   &__Container {
     table {
       margin-bottom: 32px;
-    }
-    table thead th {
-      // padding: 16px 0;
-      background: #666;
-      color: #fff;
-    }
-    table tbody td:first-of-type {
-      font-weight: bold;
+      border-radius: 4px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 0 0 1px #666;
+      thead {       
+        th {
+          border-radius: 4px 4px 0 0;
+          background: #666;
+          color: #fff;
+        }
+      }
+      tbody {
+        tr {
+          &:first-of-type {
+            td {
+              padding-top: 24px;
+            }
+          }
+          &:last-of-type {
+            td {
+              padding-bottom: 24px;
+            }
+          }
+        }
+        td {
+          &:first-of-type {
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }

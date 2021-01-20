@@ -1,8 +1,8 @@
-# Lenovo Ideapad C340 - 14IWL
+# Lenovo Ideapad C340 (Core i7, 8GB RAM e 256GB SSD)
 
 Notebook comprado no dia 29/11/2019 e em excelente estado de conservação. Comprei para trabalhar remotamente e usei somente por um período somado de aproximadamente 15 dias, depois disso ele ficou guardado pois arranjei outro emprego onde me disponibilizaram um notebook para trabalhar. O computador é bem rápido e dá conta de tarefas que exigem processamento elevado.
 
-Tem duas manchas dos adesivos da Lenovo e o do Instituto Ayrton Senna que ficavam abaixo do teclado, é possível visualizar na primeira foto.
+Tem duas manchas que eram dos adesivos que eu removi da Lenovo e do Instituto Ayrton Senna que ficavam abaixo do teclado, é possível visualizar na primeira foto.
 
 - Acompanha caneta Digital Pen.
 - Acompanha caixa e embalagem original.

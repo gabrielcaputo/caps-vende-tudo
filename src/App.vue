@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="bg">
+  <div id="app">
     <TheHeader v-if="!noHeader" />
     <vue-page-transition name="fade">
       <router-view :key="$route.fullPath" class="router" />
@@ -41,12 +41,6 @@ export default {
 
     noFooter() {
       return this.$route.meta.noFooter
-    },
-
-    bg() {
-      return {
-          // backgroundImage: `url(${require(`@/assets/images/bg.png`)})`
-      }
     },
   },
 

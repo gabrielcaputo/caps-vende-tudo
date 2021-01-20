@@ -14,6 +14,19 @@
 import { mapState } from 'vuex'
 export default {
   name: 'Home',
+  metaInfo() {
+    return {
+      title: 'Caps Vende Tudo!',
+      meta: [
+        { property: 'og:url', content: window.location.origin },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'Caps Vende Tudo!' },
+        { property: 'og:description', content: "Confira meus itens" },
+        { property: 'og:image', content: `${window.location.origin}/og.png` },
+        { name: 'robots', content: 'index,follow' } 
+      ]
+    }
+  },
   components: {},
   computed: {
     ...mapState({
@@ -47,6 +60,10 @@ export default {
     position: relative;    
     overflow: hidden;
     margin: calc(#{$unit} / 2);
+    border-radius: 4px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
+                0 2px 2px 0 rgba(0,0,0,.14),
+                0 1px 5px 0 rgba(0,0,0,.12);
     cursor: pointer;
 
     @media screen and (max-width: 767px) {
@@ -91,6 +108,8 @@ export default {
       padding: 8px;
       opacity: 1;
       transition: all 0.3s ease;
+      max-width: calc(100% - 16px);
+      border-radius: 4px;
       @media screen and (min-width: 768px) {
         top: 0;
         opacity: 0;
@@ -106,6 +125,7 @@ export default {
       background: rgba($green, 0.8);
       padding: 8px;
       opacity: 1;
+      border-radius: 4px;
       transition: all 0.3s ease;
     }
   }
