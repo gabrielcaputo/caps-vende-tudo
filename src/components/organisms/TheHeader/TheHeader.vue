@@ -108,8 +108,12 @@ export default {
                 display: block;
                 height: 64px;
                 border-radius: 50%;
-                transition: all 0.3s ease;
+                transition: height 0.3s ease;
                 margin: 0 16px 0 0;
+                filter: drop-shadow(2px 2px 0 #fff)
+                        drop-shadow(-2px 2px 0 #fff)
+                        drop-shadow(2px -2px 0 #fff) 
+                        drop-shadow(-2px -2px 0 #fff);
                 @media screen and (max-width: 767px) {
                     margin: 0 0 16px 0;
                 }

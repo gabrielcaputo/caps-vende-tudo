@@ -1,9 +1,12 @@
 <template>
   <div class="Product">
-    <div class="Product__Featured" :style="productFeaturedPhoto">
+    <div class="Product__Featured" v-lazy:background-image="product.photos[0].src">
       <div class="Product__FeaturedWrap">
         <div class="Product__Name">{{ product.name }}</div>
-        <div class="Product__Price">{{ product.price }}</div>
+        <div class="Product__Price">
+          {{ product.price }}
+          <small v-if="product.priceDetail" v-html="product.priceDetail"></small>
+        </div>
       </div>
     </div>
     <div class="Product__Container">
@@ -12,8 +15,9 @@
         :gutter="16"
       >
         <div class="Product__Photo" v-for="(photo, i) in product.photos.slice(1)" :key="i+1" @click="openLightbox(i+1)">
-          <img class="photo" :src="`${photo.thumb ? photo.thumb : photo.src}`" :alt="photo.title">
+          <img class="photo" v-lazy="`${photo.thumb ? photo.thumb : photo.src}`" :alt="photo.title">
           <div v-if="photo.title" class="title">{{ photo.title }}</div>
+          <div v-if="photo.price" class="price">{{ photo.price }}</div>
         </div>
       </masonry>
       <Markdown :src="`/products/${this.$route.params.id}/description.md`" />
@@ -31,6 +35,7 @@ export default {
   },
   data() {
     return {
+      imagesLoaded: 0,
       window: {
         width: 0,
         height: 0
@@ -54,12 +59,6 @@ export default {
       return this.products[this.$route.params.id]
     },
 
-    productFeaturedPhoto() {
-      return {
-        backgroundImage: `url(${this.product.photos[0].src})`,
-      }
-    },
-
     productPhotosColumns() {
       return this.window.width < 768 ? this.product.columnsMobile : this.product.columns
     }
@@ -70,6 +69,7 @@ export default {
   },
   methods: {
     ...mapActions({
+      setLoading: 'loading/setLoading',
       setLightbox: 'lightbox/setLightbox',
       openLightbox: 'lightbox/openLightbox',
     }),
@@ -83,7 +83,7 @@ export default {
     handleResize() {
         this.window.width = window.innerWidth;
         this.window.height = window.innerHeight;
-    }
+    },
   }
 }
 </script>
@@ -96,8 +96,14 @@ export default {
     background: #ccc;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     margin-bottom: 64px;
+
+    &[lazy=loading] {
+      background-size: 64px;
+      background-color: #eee;
+    }
     @media screen and (orientation: landscape) {
       height: calc(100vh - 48px);      
     }
@@ -151,6 +157,10 @@ export default {
     bottom: -29px;
     right: 48px;
     background: rgba($green, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
     @media screen and (max-width: 767px) {
       background: rgba($green, 0.8);
       bottom: auto;
@@ -158,6 +168,11 @@ export default {
       right: 24px;
       top: 24px;
       font-size: 24px;
+    }
+
+    small {
+      width: 100%;
+      font-size: 40%;
     }
     
   }
@@ -192,7 +207,12 @@ export default {
       border: 0;
       margin: 0;
       padding: 0;
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease;
+
+      &[lazy=loading] {
+        background-color: #eee;
+        padding: calc(50% - 24px);
+      }
     }
     .title {
       position: absolute;
@@ -207,6 +227,21 @@ export default {
       font-size: 14px;
       @media screen and (max-width: 768px) {
         opacity: 0 !important;
+      }
+    }
+
+    .price {
+      font-size: 16px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      color: #fff;
+      background: rgba($green, 0.8);
+      padding: 8px;
+      opacity: 1;
+      transition: all 0.3s ease;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
       }
     }
   }

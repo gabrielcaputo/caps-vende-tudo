@@ -2,7 +2,7 @@
   <div class="Home">
     <div class="Home__Container">
       <div class="Home__Product" v-for="(product, id) in products" :key="id" @click="goToProduct(id)">
-        <div class="featuredPhoto" :style="productFeaturedPhoto(id)"></div>
+        <div class="featuredPhoto" v-lazy:background-image="products[id].photos[0].src"></div>
         <div class="name">{{ product.name }}</div>
         <div class="price">{{ product.price }}</div>
       </div>
@@ -24,16 +24,6 @@ export default {
     goToProduct(id) {
       this.$router.push(`/product/${id}`)
     },
-
-    productFeaturedPhoto(id) {
-      return {
-        backgroundImage: `url(${
-          this.products[id].photos[0].thumb ?
-          this.products[id].photos[0].thumb :
-          this.products[id].photos[0].src
-        })`,
-      }
-    }
   }
 }
 </script>
@@ -82,8 +72,14 @@ export default {
       height: 100%;
       background-size: cover;
       background-position: center center;
+      background-repeat: no-repeat;
       transform: scale(1.01);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease;
+
+      &[lazy=loading] {
+        background-size: 64px;
+        background-color: #eee;
+      }
     }
 
     .name {
