@@ -19,7 +19,7 @@ export default {
     color: {
       type: String,
       default: 'black',
-      validator: val => ['yellow', 'mustard', 'red', 'green', 'white', 'light', 'dark', 'black'].includes(val)
+      validator: val => ['white', 'light', 'dark', 'black'].includes(val)
     }
   },
   computed: {

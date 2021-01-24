@@ -16,16 +16,16 @@
                     <Icon class="icon" :color="theme" name="semexe" v-tooltip="'Abrir anúncios no semexe'"/>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="https://www.facebook.com/caputomateus/" target="_blank">
                     <Icon class="icon" :color="theme" name="facebook" v-tooltip="'Abrir anúncios no Facebook Marketplace'"/>
                 </a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                 <a href="https://instagram.com/gabrielcaputo" target="_blank">
                     <Icon class="icon" :color="theme" name="instagram" v-tooltip="'Abrir perfil no Instagram'"/>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a href="https://m.me/caputomateus" target="_blank">
                     <Icon class="icon" :color="theme" name="messenger" v-tooltip="'Enviar Messenger'"/>

@@ -20,7 +20,15 @@
           <div v-if="photo.price" class="price">{{ photo.price }}</div>
         </div>
       </masonry>
-      <Markdown :src="`/product/${this.$route.params.id}/description.md`" />
+      <div>
+        <Markdown :src="`/product/${this.$route.params.id}/description.md`" />
+        <div v-if="product.marketplaces" class="Product__Marketplaces">
+          <div class="btn" v-for="(btn, i) in product.marketplaces" :key="i" :style="{ backgroundColor: btn.backgroundColor, color: btn.textColor }" @click="openExternal(btn.src)">
+            <Icon class="icon" :color="btn.theme" :name="btn.icon"/>
+            {{ btn.title }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -28,6 +36,7 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import { Markdown } from '@/components/molecules'
+import { Icon } from '@/components/photons'
 export default {
   name: 'product',
   metaInfo() {
@@ -36,7 +45,8 @@ export default {
     }
   },
   components: {
-    Markdown
+    Markdown,
+    Icon
   },
   data() {
     return {
@@ -88,6 +98,10 @@ export default {
         this.window.width = window.innerWidth;
         this.window.height = window.innerHeight;
     },
+
+    openExternal(src) {
+      window.open(src , '_blank');
+    }
   }
 }
 </script>
@@ -95,14 +109,16 @@ export default {
 <style lang="scss" scoped>
 .Product {
   &__Featured {
-    margin-top: -114px;
+    margin-top: -96px;
     width: 100%;
     background: #ccc;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    margin-bottom: 64px;
+    z-index: 1;
+    margin-bottom: 48px;
+    box-shadow: 0 0 0 48px #fff;
 
     &[lazy=loading] {
       background-size: 64px;
@@ -117,6 +133,7 @@ export default {
     @media screen and (max-width: 767px) {
       margin-top: -56px;
       margin-bottom: 32px;
+      box-shadow: 0 0 0 32px #fff;
     }
   }
   &__FeaturedWrap {
@@ -181,12 +198,6 @@ export default {
       font-size: 40%;
     }
     
-  }
-
-  &__Container {
-    padding-top: 0;
-    padding-bottom: 96px;
-    position: relative;
   }
 
   &__Photo {
@@ -267,6 +278,46 @@ export default {
       transition: all 0.3s ease;
       @media screen and (max-width: 768px) {
         font-size: 12px;
+      }
+    }
+  }
+
+  &__Marketplaces {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    // padding-top: 16px;
+    padding-bottom: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    // @include gradient(0deg, rgba(#fff, 0.8), transparent);
+
+    .btn {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      margin-left: 8px;
+      line-height: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+      .icon {
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+        .icon {
+          height: 24px;
+        }
       }
     }
   }

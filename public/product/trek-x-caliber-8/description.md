@@ -139,4 +139,5 @@ Ultima revisão feita em Dezembro de 2020 onde a mesma foi desmontada e foram lu
 - Não envio a bicicleta, a venda é somente para quem vier buscar na cidade de São Paulo/SP.
 - Aceito visitas para conhecer a bicicleta no Parque Ibirapuera em São Paulo/SP de acordo com agendamento. 
 - Aceito propostas para pagamento a vista com transferência bancária.
-- Parcelamento somente via MercadoLivre e SeMexe.
+- Parcelamento somente via MercadoLivre e SeMexe, confira os links ao lado.
+- Para entrar em contato, utilize o meio preferido nos botões no final da página.

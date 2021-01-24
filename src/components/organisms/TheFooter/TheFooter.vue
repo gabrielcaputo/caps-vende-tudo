@@ -42,9 +42,9 @@ export default {
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                @media screen and (max-width: 390px) {
-                    width: 180px;            
-                }
+                // @media screen and (max-width: 390px) {
+                //     width: 180px;            
+                // }
             }
         }
     }

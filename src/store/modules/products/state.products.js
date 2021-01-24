@@ -6,6 +6,24 @@ export default {
       price: "R$ 7.000,00",
       columns: 4,
       columnsMobile: 3,
+      marketplaces: [
+        {
+          title: 'Comprar',
+          icon: 'mercadolivre',
+          backgroundColor: '#ffe600',
+          textColor: '#000',
+          theme: 'dark',
+          src: ''
+        },
+        {
+          title: 'Comprar',
+          icon: 'semexe',
+          backgroundColor: '#27b67c',
+          textColor: '#fff',
+          theme: 'light',
+          src: ''
+        },
+      ],
       photos: [
         {
           src: "/product/trek-x-caliber-8/1.jpg",
@@ -232,6 +250,16 @@ export default {
       price: "R$ 3.500,00",
       columns: 3,
       columnsMobile: 2,
+      marketplaces: [
+        {
+          title: 'Comprar',
+          icon: 'mercadolivre',
+          backgroundColor: '#ffe600',
+          textColor: '#000',
+          theme: 'dark',
+          src: ''
+        }
+      ],
       photos: [
         {
           src: "/product/lenovo-ideapad-c340/1.jpg",
@@ -338,6 +366,22 @@ export default {
           description: null,
           price: null
         },
+      ]
+    },
+    'xbox-360': {
+      title: "Xbox 360",
+      description: "",
+      price: "R$ 800,00",
+      columns: 4,
+      columnsMobile: 3,
+      photos: [
+        {
+          src: "/product/xbox-360/1.jpg",
+          thumb: "/product/xbox-360/1-thumb.jpg",
+          title: "Xbox 360",
+          description: null,
+          price: null
+        }
       ]
     },
     'vaporesso-polar': {
@@ -555,7 +599,7 @@ export default {
       description: "",
       price: "R$ 150,00",
       priceDetail: "(preço para compra de <br>todos itens, com desconto)",
-      columns: 2,
+      columns: 4,
       columnsMobile: 2,
       photos: [
         {
@@ -617,6 +661,79 @@ export default {
         {
           src: "/product/itens-diversos-vape/10.jpg",
           thumb: "/product/itens-diversos-vape/10-thumb.jpg",
+          title: "Pinça de cerâmica T7B - Coil Master",
+          description: null,
+          price: "R$ 15,00"
+        },
+      ]
+    },
+    'essencias-diy-vape': {
+      title: "Essencias DIY p/ vape",
+      description: "",
+      price: "R$ 150,00",
+      priceDetail: "(preço para compra de <br>todos itens, com desconto)",
+      columns: 4,
+      columnsMobile: 2,
+      photos: [
+        {
+          src: "/product/essencias-diy-vape/1.jpg",
+          thumb: "/product/essencias-diy-vape/1-thumb.jpg",
+          title: "Itens Diversos p/ Vape",
+          description: null,
+          price: null
+        },
+        {
+          src: "/product/essencias-diy-vape/3.jpg",
+          thumb: "/product/essencias-diy-vape/3-thumb.jpg",
+          title: "Kit de ferramentas para construção de Coils",
+          description: null,
+          price: "R$ 25,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/4.jpg",
+          thumb: "/product/essencias-diy-vape/4-thumb.jpg",
+          title: "Estojo com 3x N80 Fused Clapton Coil 0.35Ω e 4x N80 Fused Clapton Coil 0.4Ω",
+          description: null,
+          price: "R$ 10,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/5.jpg",
+          thumb: "/product/essencias-diy-vape/5-thumb.jpg",
+          title: "3x SS316L Tiger Coil 0.42Ω",
+          description: null,
+          price: "R$ 6,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/6.jpg",
+          thumb: "/product/essencias-diy-vape/6-thumb.jpg",
+          title: "2x SS316L Twisted Fused Coil 0.55Ω",
+          description: null,
+          price: "R$ 4,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/7.jpg",
+          thumb: "/product/essencias-diy-vape/7-thumb.jpg",
+          title: "Algodão: Cotton Bacon Prime (foi usado pra wickar 4x somente, então o pacote está bem cheio)",
+          description: null,
+          price: "R$ 25,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/8.jpg",
+          thumb: "/product/essencias-diy-vape/8-thumb.jpg",
+          title: "Algodão: Cotn Threads (Embalagem só tem 2 unidades)",
+          description: null,
+          price: "R$ 4,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/9.jpg",
+          thumb: "/product/essencias-diy-vape/9-thumb.jpg",
+          title: "Bateria 30Q 18650 Samsung",
+          description: null,
+          price: "R$ 15,00 cada"
+        },
+        {
+          src: "/product/essencias-diy-vape/10.jpg",
+          thumb: "/product/essencias-diy-vape/10-thumb.jpg",
           title: "Pinça de cerâmica T7B - Coil Master",
           description: null,
           price: "R$ 15,00"

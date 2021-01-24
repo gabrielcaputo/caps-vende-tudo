@@ -217,4 +217,5 @@ Tem duas manchas que eram dos adesivos que eu removi da Lenovo e do Instituto Ay
 - Dou preferência para quem for da cidade de São Paulo/SP e consiga retirar o computador em mãos.
 - Envios com o frete por conta do comprador e somente para pagamentos antecipados e aprovados via MercadoLivre ou transferência bancária.
 - Aceito propostas para pagamento a vista com transferência bancária.
-- Parcelamento somente via MercadoLivre.
+- Parcelamento somente via MercadoLivre, confira o link ao lado.
+- Para entrar em contato, utilize o meio preferido nos botões no final da página.

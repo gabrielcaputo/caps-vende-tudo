@@ -36,7 +36,7 @@ export default {
 .TheHeader {
     position: relative;
     padding: 48px 0;
-    z-index: 1;
+    z-index: 2;
     transition: all 0.3s ease;
 
     @media screen and (max-width: 767px) {
