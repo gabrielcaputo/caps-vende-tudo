@@ -597,8 +597,8 @@ export default {
     'itens-diversos-vape': {
       title: "Itens Diversos p/ Vape",
       description: "",
-      price: "R$ 150,00",
-      priceDetail: "(preço para compra de <br>todos itens, com desconto)",
+      price: "R$ 120,00",
+      priceDetail: "(preço para compra de todos <br>itens de uma vez, com desconto)",
       columns: 4,
       columnsMobile: 2,
       photos: [
