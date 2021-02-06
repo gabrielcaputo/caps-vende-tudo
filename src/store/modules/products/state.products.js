@@ -368,22 +368,22 @@ export default {
         },
       ]
     },
-    'xbox-360': {
-      title: "Xbox 360",
-      description: "",
-      price: "R$ 800,00",
-      columns: 4,
-      columnsMobile: 3,
-      photos: [
-        {
-          src: "/product/xbox-360/1.jpg",
-          thumb: "/product/xbox-360/1-thumb.jpg",
-          title: "Xbox 360",
-          description: null,
-          price: null
-        }
-      ]
-    },
+    // 'xbox-360': {
+    //   title: "Xbox 360",
+    //   description: "",
+    //   price: "R$ 800,00",
+    //   columns: 4,
+    //   columnsMobile: 3,
+    //   photos: [
+    //     {
+    //       src: "/product/xbox-360/1.jpg",
+    //       thumb: "/product/xbox-360/1-thumb.jpg",
+    //       title: "Xbox 360",
+    //       description: null,
+    //       price: null
+    //     }
+    //   ]
+    // },
     'vaporesso-polar': {
       title: "Vaporesso Polar",
       description: "",
@@ -656,7 +656,8 @@ export default {
           thumb: "/product/itens-diversos-vape/9-thumb.jpg",
           title: "Bateria 30Q 18650 Samsung",
           description: null,
-          price: "R$ 15,00 cada"
+          price: "R$ 60,00",
+          priceDetail: "(R$ 15,00 cada)"
         },
         {
           src: "/product/itens-diversos-vape/10.jpg",
@@ -670,7 +671,7 @@ export default {
     'essencias-diy-vape': {
       title: "Essencias DIY p/ vape",
       description: "",
-      price: "R$ 150,00",
+      price: "R$ 100,00",
       priceDetail: "(preço para compra de <br>todos itens, com desconto)",
       columns: 4,
       columnsMobile: 2,
@@ -678,65 +679,116 @@ export default {
         {
           src: "/product/essencias-diy-vape/1.jpg",
           thumb: "/product/essencias-diy-vape/1-thumb.jpg",
-          title: "Itens Diversos p/ Vape",
+          title: "",
           description: null,
           price: null
         },
         {
+          src: "/product/essencias-diy-vape/2.jpg",
+          thumb: "/product/essencias-diy-vape/2-thumb.jpg",
+          title: "Frasco 100ml Unicorn (Chubby Gorilla Original v3)",
+          description: null,
+          price: "R$ 3,00"
+        },
+        {
           src: "/product/essencias-diy-vape/3.jpg",
           thumb: "/product/essencias-diy-vape/3-thumb.jpg",
-          title: "Kit de ferramentas para construção de Coils",
+          title: "Frasco 30ml Unicorn",
           description: null,
-          price: "R$ 25,00"
+          price: "R$ 6,00",
+          priceDetail: "(R$ 2,00 cada)"
         },
         {
           src: "/product/essencias-diy-vape/4.jpg",
           thumb: "/product/essencias-diy-vape/4-thumb.jpg",
-          title: "Estojo com 3x N80 Fused Clapton Coil 0.35Ω e 4x N80 Fused Clapton Coil 0.4Ω",
+          title: "Frasco 30ml",
           description: null,
-          price: "R$ 10,00"
+          price: "R$ 3,00",
+          priceDetail: "(R$ 0,50 cada)"
         },
         {
           src: "/product/essencias-diy-vape/5.jpg",
           thumb: "/product/essencias-diy-vape/5-thumb.jpg",
-          title: "3x SS316L Tiger Coil 0.42Ω",
+          title: "Nicotina 50ml Base PG 100mg/ml",
           description: null,
-          price: "R$ 6,00"
+          price: "R$ 40,00"
         },
         {
           src: "/product/essencias-diy-vape/6.jpg",
           thumb: "/product/essencias-diy-vape/6-thumb.jpg",
-          title: "2x SS316L Twisted Fused Coil 0.55Ω",
+          title: "Essência Koolada 10PG (TPA)",
           description: null,
-          price: "R$ 4,00"
+          price: "R$ 8,00"
         },
         {
           src: "/product/essencias-diy-vape/7.jpg",
           thumb: "/product/essencias-diy-vape/7-thumb.jpg",
-          title: "Algodão: Cotton Bacon Prime (foi usado pra wickar 4x somente, então o pacote está bem cheio)",
+          title: "Essência Kiwi (Double) (TPA)",
           description: null,
-          price: "R$ 25,00"
+          price: "R$ 8,00"
         },
         {
           src: "/product/essencias-diy-vape/8.jpg",
           thumb: "/product/essencias-diy-vape/8-thumb.jpg",
-          title: "Algodão: Cotn Threads (Embalagem só tem 2 unidades)",
+          title: "Essência Cubano Type (TPA)",
           description: null,
           price: "R$ 4,00"
         },
         {
           src: "/product/essencias-diy-vape/9.jpg",
           thumb: "/product/essencias-diy-vape/9-thumb.jpg",
-          title: "Bateria 30Q 18650 Samsung",
+          title: "Essência Sweetener (TPA)",
           description: null,
-          price: "R$ 15,00 cada"
+          price: "R$ 5,00"
         },
         {
           src: "/product/essencias-diy-vape/10.jpg",
           thumb: "/product/essencias-diy-vape/10-thumb.jpg",
-          title: "Pinça de cerâmica T7B - Coil Master",
+          title: "Essência Lemon (TPA)",
           description: null,
-          price: "R$ 15,00"
+          price: "R$ 5,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/11.jpg",
+          thumb: "/product/essencias-diy-vape/11-thumb.jpg",
+          title: "Essência Vanilla Swirl (TPA)",
+          description: null,
+          price: "R$ 6,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/12.jpg",
+          thumb: "/product/essencias-diy-vape/12-thumb.jpg",
+          title: "Essência French Vanilla (TPA)",
+          description: null,
+          price: "R$ 5,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/13.jpg",
+          thumb: "/product/essencias-diy-vape/13-thumb.jpg",
+          title: "Essência Banana Ripe (TPA)",
+          description: null,
+          price: "R$ 5,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/14.jpg",
+          thumb: "/product/essencias-diy-vape/14-thumb.jpg",
+          title: "Essência Ethyl Maltol (TPA)",
+          description: null,
+          price: "R$ 8,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/15.jpg",
+          thumb: "/product/essencias-diy-vape/15-thumb.jpg",
+          title: "Essência Chocolate Tobacco (Flavor West)",
+          description: null,
+          price: "R$ 2,00"
+        },
+        {
+          src: "/product/essencias-diy-vape/16.jpg",
+          thumb: "/product/essencias-diy-vape/16-thumb.jpg",
+          title: "Essência Cola (Flavor West)",
+          description: null,
+          price: "R$ 2,00"
         },
       ]
     },

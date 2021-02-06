@@ -17,7 +17,10 @@
         <div class="Product__Photo" v-for="(photo, i) in product.photos.slice(1)" :key="i+1" @click="openLightbox(i+1)">
           <img class="photo" v-lazy="`${photo.thumb ? photo.thumb : photo.src}`" :alt="photo.title">
           <div v-if="photo.title" class="title">{{ photo.title }}</div>
-          <div v-if="photo.price" class="price">{{ photo.price }}</div>
+          <div v-if="photo.price" class="price">
+            {{ photo.price }}
+            <small v-if="photo.priceDetail">{{ photo.priceDetail }}</small>
+          </div>
         </div>
       </masonry>
       <div>
@@ -276,8 +279,16 @@ export default {
       opacity: 1;
       border-radius: 4px;
       transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
       @media screen and (max-width: 768px) {
         font-size: 12px;
+      }
+
+      small {
+        font-size: 75%;
       }
     }
   }
